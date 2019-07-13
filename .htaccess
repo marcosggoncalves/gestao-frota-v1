@@ -1,0 +1,19 @@
+
+# HTID:7985351: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:7985351:
+php_flag output_buffering on
+Options All -Indexes
+
+
+
+
+# Chamar arquivo sem declarar extensão
+
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
