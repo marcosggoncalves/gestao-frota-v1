@@ -21,8 +21,11 @@
 			}
 	}
 	function salvar_manuntencao($POST){
+
 		$insert_manuntencao = $GLOBALS['Recursos']->Query($GLOBALS['inserts']->salvar_manuntencao($POST));
+
 		$update_veiculo =  $GLOBALS['Recursos']->Query($GLOBALS['updates']->mudar_status_veiculo_via_id('Indisponivel',$POST['id_veiculo']));
+		
 		if($POST["placa_veiculo"] != 'Veiculo não substituido'){
 			$update_veiculo_sub =  $GLOBALS['Recursos']->Query($GLOBALS['updates']->mudar_status_veiculo_via_placa('Indisponivel',$POST['placa_veiculo']));
 		}

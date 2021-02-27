@@ -19,7 +19,6 @@ function inputs_name_validar(...names){
 				}
 				let transformar_minusculo = inputs.toLowerCase();
 				campos.push({'Campos':transformar_minusculo, msg:'Preencha o campo '+ transformar_minusculo + '.' });
-				return;
 			}
 		});
 		if (campos.length > 0) {

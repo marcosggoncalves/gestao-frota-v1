@@ -3,7 +3,7 @@
 	class inserts {
 		public function salvar_manuntencao($data)
 		{
-			return "INSERT INTO saida_para_manuntencao VALUES ('0','','".$data["km_saida_veiculo"]."','','Aberto',now(),'".$data["placa_veiculo"]."','".$data["id_veiculo"]."','".$data["desc_manuntencao"]."')";
+			return "INSERT INTO saida_para_manuntencao VALUES ('0','','".$data["km_saida_veiculo"]."',null,'Aberto',now(),'".$data["placa_veiculo"]."','".$data["id_veiculo"]."','".$data["desc_manuntencao"]."')";
 		}
 		public function salvar_troca_oleo($data)
 		{
@@ -27,7 +27,7 @@
 		}
 		public function salvar_usuario($data)
 		{
-			return "INSERT INTO usuario VALUES ('0','".$data["nome_user"]."','".$data["setor_user"]."','".$data["telefone_user"]."','".$data["email_user"]."','".$data["senha_user"]."','Ativo','null')";
+			return "INSERT INTO usuario VALUES ('0','".$data["nome_user"]."','".$data["setor_user"]."','".$data["telefone_user"]."','".$data["email_user"]."','".$data["senha_user"]."','Ativo',null)";
 		}
 	}
 

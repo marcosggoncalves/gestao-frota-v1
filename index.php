@@ -6,7 +6,7 @@
 	<body>
 		<main>
 			<div class="login">
-				<form name="form" action="php/request?page=Logar" method="post">
+				<form name="form"  action="php/request?page=Logar" method="post">
 					<div class="titulo">
 						<div>	
 							<h1>Transporte escolar</h1>

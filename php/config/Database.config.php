@@ -7,9 +7,9 @@
 
 	
 
-	$config['host'] = 'controle_sist.mysql.dbaas.com.br';
-	$config['user'] = 'controle_sist';
-	$config['password'] = 'Lopes9951';
+	$config['host'] = 'localhost';
+	$config['user'] = 'root';
+	$config['password'] = '';
 	$config['dbname'] = 'controle_sist';
 	
 	//Paginação, quantidade de itens a ser mostrado.
