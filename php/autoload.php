@@ -10,7 +10,6 @@
 	include 'models/Updates.php';
 	include 'models/Deletes.php';
 
-
 	//controllers
 	include 'controllers/session.php';
 	include 'controllers/painel.php';
@@ -29,9 +28,5 @@
 	$GLOBALS['inserts'] = new inserts();	
 	$GLOBALS['deletes'] = new deletes();	
 
-
 	// Recursos Globais
 	$GLOBALS['Recursos'] = new Recursos();
-
-
- ?>

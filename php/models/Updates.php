@@ -1,6 +1,5 @@
 <?php 
 
-
 	class updates{
 		public function mudar_status_veiculo_via_id($status,$data)
 		{
@@ -43,5 +42,3 @@
 			return "update produtos set nome_produto = '".$data['nome_produto']."',quantidade_produto = '".$data['quantidade_produto']."',quantidade_restante = '".$data['quantidade_produto']."' WHERE id_produto = ".$id."";
 		}
 	}
-
- ?>

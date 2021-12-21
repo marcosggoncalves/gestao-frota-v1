@@ -1,5 +1,4 @@
 <?php 
-
 	class selects
 	{
 		public function all_trocas_oleo()
@@ -107,4 +106,3 @@
 			return 'select*from veiculos,categoria where veiculos.id_categoria = categoria.id_categoria order by status asc';
 		}
 	}
-?>

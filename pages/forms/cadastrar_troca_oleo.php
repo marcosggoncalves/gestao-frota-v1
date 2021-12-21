@@ -1,14 +1,15 @@
 <!-- controller -->
-    <?php include '../../php/autoload.php'; ?>
+<?php include '../../php/autoload.php'; ?>
 <!-- ---------- -->
 
 <!DOCTYPE html>
 <html>
-	<?php include '../componentes/head_page.inc'?>
+<?php include '../componentes/head_page.inc' ?>
+
 <body>
-	<?php include '../componentes/header.inc'?>
+	<?php include '../componentes/header.inc' ?>
 	<main>
-		<?php include '../componentes/sidebar.inc'?>
+		<?php include '../componentes/sidebar.inc' ?>
 		<div class="content">
 			<div class="box-dados">
 				<div class="box-dados-title">
@@ -27,8 +28,8 @@
 						<div class="container-input">
 							<label for="id_veiculo">Veículo:</label>
 							<select name="id_veiculo" id="id_veiculo">
-								<option  value="" >Selecionar veiculo</option>
-								<?= todos_veiculos()?>
+								<option value="">Selecionar veiculo</option>
+								<?= todos_veiculos() ?>
 							</select>
 						</div>
 						<div class="conjuntos_btns">
@@ -42,8 +43,9 @@
 					</form>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</main>
-	<?php include '../componentes/footer.inc'?>
+	<?php include '../componentes/footer.inc' ?>
 </body>
+
 </html>

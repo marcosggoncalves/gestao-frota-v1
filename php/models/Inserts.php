@@ -1,5 +1,4 @@
 <?php 
-	
 	class inserts {
 		public function salvar_manuntencao($data)
 		{
@@ -30,6 +29,3 @@
 			return "INSERT INTO usuario VALUES ('0','".$data["nome_user"]."','".$data["setor_user"]."','".$data["telefone_user"]."','".$data["email_user"]."','".$data["senha_user"]."','Ativo',null)";
 		}
 	}
-
-
- ?>

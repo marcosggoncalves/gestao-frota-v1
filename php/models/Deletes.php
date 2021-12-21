@@ -1,7 +1,4 @@
 <?php 
-
-
-
 	class deletes{
 		public function deletar_usuario($id)
 		{
@@ -24,5 +21,3 @@
 			return 'delete from produtos where id_produto = '.$id.'';
 		}
 	}
-
- ?>

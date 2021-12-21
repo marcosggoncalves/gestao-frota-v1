@@ -1,9 +1,7 @@
 <?php  
 	
-
 	include 'config/Database.connect.php';
 	
-
 	class Recursos extends Connect
 	{
 		public function Query($select){
@@ -64,5 +62,3 @@
           return (new DateTime($datatime))->format('d/m/Y H:i:s');		
 		}
 	}
-		
-?>

@@ -1,13 +1,9 @@
 <?php  
-	
-	
 	include 'autoload.php';
 	
-
 	$Request = filter_input(INPUT_GET,'page',FILTER_SANITIZE_SPECIAL_CHARS);
 	$id = filter_input(INPUT_GET,'id',FILTER_SANITIZE_SPECIAL_CHARS);
 	$entradas = filter_input_array(INPUT_POST,$_POST);
-
 
 	if($Request == 'Logar'){
 		acessar($entradas);
@@ -66,5 +62,3 @@
 	}else{
 		header('Location: ../pages/relatorios/painel.php');
 	}
-
-?>
