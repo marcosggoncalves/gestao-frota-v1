@@ -14,13 +14,13 @@
 			<div class="resposive_table">
 				<div class='box-dados'>
 				<div class='box-dados-title'>
-					<h1>Relatório Saida Manuntenção <b>(<?=$_SESSION['pesquisa']['nome_mes'].'/'.$_SESSION['pesquisa']['Ano'] ?>) </b></h1>
+					<h1>Relatório Saida Manutenção <b>(<?=$_SESSION['pesquisa']['nome_mes'].'/'.$_SESSION['pesquisa']['Ano'] ?>) </b></h1>
 				</div>
 				<table id='HTMLtoPDF'>
 					<tr>
 						<th>Data saida</th>
 						<th>Data entrada</th>
-						<th>Código manuntenção </th>
+						<th>Código manutenção </th>
 						<th>Veículo</th>
 						<th>Situação</th>
 					</tr>

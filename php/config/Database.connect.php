@@ -2,12 +2,19 @@
 
 include 'Database.config.php';
 
-class Connect
+class Conexao
 {
-	public function connect()
+	public $connect;
+
+	public function __construct() {
+		$this->conectar();
+	}
+
+	public function conectar()
 	{
-		$this->connect = mysqli_connect($GLOBALS['config']['host'], $GLOBALS['config']['user'], $GLOBALS['config']['password'], $GLOBALS['config']['dbname']);
 		try {
+			$this->connect = mysqli_connect($GLOBALS['config']['host'], $GLOBALS['config']['user'], $GLOBALS['config']['password'], $GLOBALS['config']['dbname']);
+		
 			if (!$this->connect) {
 				throw new Exception("error na conexão");
 			}

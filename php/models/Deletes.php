@@ -4,9 +4,9 @@
 		{
 			return 'delete from usuario where id_usuario ='.$id.'';
 		}
-		public function deletar_manuntencao($id)
+		public function deletar_manutencao($id)
 		{
-			return 'delete from saida_para_manuntencao where id_saida_manuntencao = '.$id.'';
+			return 'delete from saida_para_manutencao where id_saida_manutencao = '.$id.'';
 		}
 		public function deletar_troca_oleo($id)
 		{

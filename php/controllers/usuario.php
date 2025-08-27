@@ -1,7 +1,7 @@
 <?php
 function salvar_usuario($POST)
 {
-	$salvar_usuario = $GLOBALS['Recursos']->Query($GLOBALS['inserts']->salvar_usuario($POST));
+	$salvar_usuario = $GLOBALS['Recursos']->query($GLOBALS['inserts']->salvar_usuario($POST));
 
 	try {
 		if (!$salvar_usuario) {
@@ -16,7 +16,7 @@ function salvar_usuario($POST)
 }
 function update_usuario($POST)
 {
-	$update_usuario = $GLOBALS['Recursos']->Query($GLOBALS['updates']->mudar_informacoes_usuario($POST));
+	$update_usuario = $GLOBALS['Recursos']->query($GLOBALS['updates']->mudar_informacoes_usuario($POST));
 	try {
 		if (!$update_usuario) {
 			throw new Exception("Não foi possivel alterar as informações.");
@@ -33,7 +33,7 @@ function todos_usuarios($pagina)
 {
 	$GLOBALS['pagina'] = $pagina;
 
-	$GLOBALS['Recursos']->paginação($GLOBALS['Recursos']->Query($GLOBALS['selects']->all_usuarios()), 'select*from usuario', $GLOBALS['pagina'], function ($dados) {
+	$GLOBALS['Recursos']->paginacao($GLOBALS['Recursos']->query($GLOBALS['selects']->all_usuarios()), 'select*from usuario', $GLOBALS['pagina'], function ($dados) {
 
 
 		$html = array();
@@ -61,23 +61,23 @@ function todos_usuarios($pagina)
 	}, function ($paginas) {
 		if ($paginas > 1) {
 			for ($i = 1; $i < $paginas + 1; $i++) {
-				echo " <div class='paginação'><a  href='../../pages/relatorios/relatorio_todos_usuarios?pagina=$i'>" . $i . "</a></div>";
+				echo " <div class='paginacao'><a  href='../../pages/relatorios/relatorio_todos_usuarios?pagina=$i'>" . $i . "</a></div>";
 			}
 		}
 	});
 }
 function ativar_usuario($id)
 {
-	$GLOBALS['Recursos']->Query($GLOBALS['updates']->status_usuario($id, 'Ativo'));
+	$GLOBALS['Recursos']->query($GLOBALS['updates']->status_usuario($id, 'Ativo'));
 	header('Location: ../pages/relatorios/relatorio_todos_usuarios');
 }
 function desativar_usuario($id)
 {
-	$GLOBALS['Recursos']->Query($GLOBALS['updates']->status_usuario($id, 'Desativado'));
+	$GLOBALS['Recursos']->query($GLOBALS['updates']->status_usuario($id, 'Desativado'));
 	header('Location: ../pages/relatorios/relatorio_todos_usuarios');
 }
 function delete_usuario($id)
 {
-	$GLOBALS['Recursos']->Query($GLOBALS['deletes']->deletar_usuario($id));
+	$GLOBALS['Recursos']->query($GLOBALS['deletes']->deletar_usuario($id));
 	header('Location: ../pages/relatorios/relatorio_todos_usuarios');
 }

@@ -3,13 +3,13 @@
 
 function todas_categorias()
 {
-	$GLOBALS['Recursos']->fetch_array($GLOBALS['Recursos']->Query($GLOBALS['selects']->all_categorias()), function ($dados) {
+	$GLOBALS['Recursos']->fetch_array($GLOBALS['Recursos']->query($GLOBALS['selects']->all_categorias()), function ($dados) {
 		echo "<option value=" . $dados[0] . ">" . $dados[1] . '/' . $dados[2] . "</option>";
 	});
 }
 function salvar_veiculo($POST)
 {
-	$salvar_veiculo = $GLOBALS['Recursos']->Query($GLOBALS['inserts']->salvar_veiculo($POST));
+	$salvar_veiculo = $GLOBALS['Recursos']->query($GLOBALS['inserts']->salvar_veiculo($POST));
 	try {
 		if (!$salvar_veiculo) {
 			throw new Exception("Não foi possivel registrar veiculo.");
@@ -23,7 +23,7 @@ function salvar_veiculo($POST)
 }
 function all_veiculos($pagina)
 {
-	$GLOBALS['Recursos']->paginação($GLOBALS['Recursos']->Query($GLOBALS['selects']->all_veiculos_asc()), $GLOBALS['selects']->all_veiculos_asc(), $pagina, function ($dados) {
+	$GLOBALS['Recursos']->paginacao($GLOBALS['Recursos']->query($GLOBALS['selects']->all_veiculos_asc()), $GLOBALS['selects']->all_veiculos_asc(), $pagina, function ($dados) {
 		$html = array();
 		$html[] = "<tr>
 							<td>" . $dados[1] . "</td>
@@ -49,7 +49,7 @@ function all_veiculos($pagina)
 		if ($paginas > 1) {
 			for ($i = 1; $i < $paginas + 1; $i++) {
 				echo "
-				<div class='paginação'><a  href='../../pages/relatorios/relatorio_todos_veiculos?pagina=$i'>" . $i . "</a></div>
+				<div class='paginacao'><a  href='../../pages/relatorios/relatorio_todos_veiculos?pagina=$i'>" . $i . "</a></div>
 				";
 			}
 		}
@@ -57,7 +57,7 @@ function all_veiculos($pagina)
 }
 function deletar_veiculo($id)
 {
-	$delete = $GLOBALS['Recursos']->Query($GLOBALS['deletes']->deletar_veiculo($id));
+	$delete = $GLOBALS['Recursos']->query($GLOBALS['deletes']->deletar_veiculo($id));
 	if (!$delete) {
 		header('Location: ../pages/relatorios/relatorio_todos_veiculos');
 	} else {
@@ -67,7 +67,7 @@ function deletar_veiculo($id)
 
 function editar_veiculo($post, $id)
 {
-	$editar_veiculo =  $GLOBALS['Recursos']->Query($GLOBALS['updates']->editar_veiculo($post, $id));
+	$editar_veiculo =  $GLOBALS['Recursos']->query($GLOBALS['updates']->editar_veiculo($post, $id));
 
 	if (!$editar_veiculo) {
 		header('Location:../pages/relatorios/relatorio_todos_veiculos');
@@ -79,7 +79,7 @@ function editar_veiculo($post, $id)
 function target_veiculo($id)
 {
 	$_SESSION['veiculo'] = array();
-	$GLOBALS['Recursos']->fetch_array($GLOBALS['Recursos']->Query($GLOBALS['selects']->target_veiculo($id)), function ($dados) {
+	$GLOBALS['Recursos']->fetch_array($GLOBALS['Recursos']->query($GLOBALS['selects']->target_veiculo($id)), function ($dados) {
 		$_SESSION['veiculo'][] = $dados;
 	});
 	header('Location:../pages/forms/editar_veiculo');

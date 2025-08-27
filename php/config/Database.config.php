@@ -2,14 +2,13 @@
 	$GLOBALS['config'] =  array();
 
 	// conexão com banco de dados MYSQL
-	$config['host'] = 'localhost';
-	$config['user'] = 'root';
-	$config['password'] = '';
-	$config['dbname'] = 'controle_sist';
+	$config['host'] = '192.168.200.109';
+	$config['user'] = 'gonsul';
+	$config['password'] = 'gonsul@9185';
+	$config['dbname'] = 'controle_sist_v1';
 	
-	//Paginação, quantidade de itens a ser mostrado.
+	//paginacao, quantidade de itens a ser mostrado.
 	$GLOBALS['config']['quantidade_registros'] =  15;
-
 
 	// Variavel de Quilometragem troca de óleo, para sugerir aproxima troca de óleo.
 	$GLOBALS['config']['kilometragem_troca_de_oleo'] = 20.000;

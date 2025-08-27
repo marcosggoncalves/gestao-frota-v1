@@ -21,13 +21,13 @@
 		{
 			return "select sum(quantidade_retirada) from controle_saida_entrada_produtos where id_produto=".$id."";
 		}
-		public function all_saida_manuntencoes()
+		public function all_saida_manutencoes()
 		{
-			return 'select*from saida_para_manuntencao';
+			return 'select*from saida_para_manutencao';
 		}
-		public function all_saida_manuntencoes_relacionamento()
+		public function all_saida_manutencoes_relacionamento()
 		{
-			return 'select*from saida_para_manuntencao,veiculos,categoria where saida_para_manuntencao.id_veiculo = veiculos.id_veiculo and veiculos.id_categoria = categoria.id_categoria order by saida_para_manuntencao.data_saida_veiculo desc ';
+			return 'select*from saida_para_manutencao,veiculos,categoria where saida_para_manutencao.id_veiculo = veiculos.id_veiculo and veiculos.id_categoria = categoria.id_categoria order by saida_para_manutencao.data_saida_veiculo desc ';
 		}
 		public function all_veiculos_indisponiveis()
 		{
@@ -39,7 +39,7 @@
 		}
 		public function all_veiculos_substituicao()
 		{
-			return 'select*from saida_para_manuntencao,veiculos where saida_para_manuntencao.id_veiculo = veiculos.id_veiculo and saida_para_manuntencao.id_saida_manuntencao and saida_para_manuntencao.status = "Aberto" order by data_saida_veiculo asc limit 10';
+			return 'select*from saida_para_manutencao,veiculos where saida_para_manutencao.id_veiculo = veiculos.id_veiculo and saida_para_manutencao.id_saida_manutencao and saida_para_manutencao.status = "Aberto" order by data_saida_veiculo asc limit 10';
 		}
 		public function all_produtos_retirados()
 		{
@@ -47,7 +47,7 @@
 		}
 		public function logar_user($datauser)
 		{
-			return 'select*from usuario where nome_usuario = "'.$datauser['Usuário'].'" and  senha_usuario = "'.$datauser['senha'].'"';
+			return 'select*from usuario where nome_usuario = "'.$datauser['usuario'].'" and  senha_usuario = "'.$datauser['senha'].'"';
 		}
 		public function veiculos_status($status,$categoria)
 		{
@@ -65,9 +65,9 @@
 		{
 			return 'select*from usuario';
 		}
-		public function filtro_saida_manuntencao($data)
+		public function filtro_saida_manutencao($data)
 		{
-			return 'select*from saida_para_manuntencao,veiculos where saida_para_manuntencao.id_veiculo = veiculos.id_veiculo and veiculos.id_veiculo and MONTH(data_saida_veiculo) = "'.$data['mes'].'" and YEAR(data_saida_veiculo) = "'.$data['Ano'].'" ';
+			return 'select*from saida_para_manutencao,veiculos where saida_para_manutencao.id_veiculo = veiculos.id_veiculo and veiculos.id_veiculo and MONTH(data_saida_veiculo) = "'.$data['mes'].'" and YEAR(data_saida_veiculo) = "'.$data['Ano'].'" ';
 		}
 		public function filtro_produtos_retirados($data)
 		{
@@ -77,13 +77,13 @@
 		{
 			return 'select*from controle_troca_oleo,veiculos where controle_troca_oleo.id_veiculo = veiculos.id_veiculo and MONTH(data_troca) = '.$data['mes'].' and YEAR(data_troca) = '.$data['Ano'].' ';
 		}
-		public function target_manuntencao($id_saida_manuntencao)
+		public function target_manutencao($id_saida_manutencao)
 		{
-			return'select*from saida_para_manuntencao,veiculos where saida_para_manuntencao.id_veiculo = veiculos.id_veiculo and saida_para_manuntencao.id_saida_manuntencao = '.$id_saida_manuntencao.'';
+			return'select*from saida_para_manutencao,veiculos where saida_para_manutencao.id_veiculo = veiculos.id_veiculo and saida_para_manutencao.id_saida_manutencao = '.$id_saida_manutencao.'';
 		}
-		public function target_manuntencao_id($id)
+		public function target_manutencao_id($id)
 		{
-			return 'SELECT * FROM saida_para_manuntencao where id_saida_manuntencao = "'.$id.'"';
+			return 'SELECT * FROM saida_para_manutencao where id_saida_manutencao = "'.$id.'"';
 		}
 		public function target_troca($id)
 		{

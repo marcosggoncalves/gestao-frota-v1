@@ -28,7 +28,7 @@ function mostrar_login()
 }
 function acessar($POST)
 {
-	$GLOBALS['Recursos']->login($GLOBALS['Recursos']->Query($GLOBALS['selects']->logar_user($POST)), function ($dados) {
+	$GLOBALS['Recursos']->login($GLOBALS['Recursos']->query($GLOBALS['selects']->logar_user($POST)), function ($dados) {
 		if ($dados[6] == 'Desativado') {
 			$_SESSION["msg"] = $dados[1] . ', sua conta está desativado, por favor contate o setor responsável pela administração do sistema.';
 			header('Location: ../index');

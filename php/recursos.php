@@ -2,9 +2,12 @@
 	
 	include 'config/Database.connect.php';
 	
-	class Recursos extends Connect
+	class Recursos extends Conexao
 	{
-		public function Query($select){
+		public $query;
+		public $fect;
+
+		public function query($select){
 			$this->query =  mysqli_query($this->connect,$select) or die(mysqli_error($this->connect));
 			return $this->query;
 		}
@@ -23,7 +26,7 @@
 				$callback2();
 			}
 		}
-		public function paginação($query,$select,$pagina,$callback,$callback2){
+		public function paginacao($query,$select,$pagina,$callback,$callback2){
 
 			$this->linhas = mysqli_num_rows($query);
 			$this->registros = $GLOBALS['config']['quantidade_registros'] ;
@@ -39,7 +42,7 @@
 			$callback2($this->paginas);
 
 		}
-		public function data_diferença($data1,$data2){
+		public function data_diferenca($data1,$data2){
 			  $this->datatime1 = new DateTime($data1);
 		      $this->datatime2 = new DateTime($data2);
 		      $this->data1  = $this->datatime1->format('Y-m-d H:i:s');
@@ -48,9 +51,9 @@
 		     
 		     return $this->horas =  ($this->diff->days) . ' - Dias';
 		}
-		public function diferença_km($km1,$km2){
-			$diferença = ceil($km1 - $km2);
-			return $diferença. ' - Km aproximado';
+		public function diferenca_km($km1,$km2){
+			$diferenca = ceil($km1 - $km2);
+			return $diferenca. ' - Km aproximado.';
 		}
 		public function contador_registros($select){
 			$this->query =  mysqli_query($this->connect,$select); 

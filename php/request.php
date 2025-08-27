@@ -9,8 +9,8 @@
 		acessar($entradas);
 	}else if($Request == 'Sair'){
 		finalizar_sessao();
-	}else if($Request ==  'Salvar/Manuntenção'){
-		salvar_manuntencao($entradas);
+	}else if($Request ==  'Salvar/Manutenção'){
+		salvar_manutencao($entradas);
 	}else if($Request == 'Troca/oleo/salvar'){
 		Salvar_troca_oleo($entradas);
 	}else if($Request == 'Salvar/retirada/produto'){
@@ -31,16 +31,16 @@
 		desativar_usuario($id);
 	}else if($Request == 'relatorio/filtros'){
 		relatorio_mensais_resultados($entradas);
-	}else if($Request == 'manuntenção/visuzalizar'){
-		relatorio_final_manuntencao($id);
-	}else if($Request == 'Finalizar/manuntenção'){
-		finalizar_manuntencao($entradas,$id);
+	}else if($Request == 'manutencao/visuzalizar'){
+		relatorio_final_manutencao($id);
+	}else if($Request == 'finalizar/manutencao'){
+		finalizar_manutencao($entradas,$id);
 	}else if($Request == 'editar/usuario'){
 		update_usuario($entradas);
-	}else if($Request == 'abrir/manuntenção'){
-		abrir_manuntencao($id);
-	}else if($Request == 'excluir/manuntenção'){
-		excluir_manuntencao($id);
+	}else if($Request == 'abrir/manutencao'){
+		abrir_manutencao($id);
+	}else if($Request == 'excluir/manutencao'){
+		excluir_manutencao($id);
 	}else if($Request == 'editar/troca'){
 		selecionar_troca_oleo($id);
 	}else if($Request == 'editar/salvar/troca'){

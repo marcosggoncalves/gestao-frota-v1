@@ -9,9 +9,9 @@
 		{
 			return "update veiculos set status = '".$status."' where placa_veiculo = '".$data."' ";
 		} 
-		public function mudar_quantidade_restante_produto($diferença,$data)
+		public function mudar_quantidade_restante_produto($diferenca,$data)
 		{
-			return"update produtos set quantidade_restante =".$diferença." where id_produto =".$data."";
+			return"update produtos set quantidade_restante =".$diferenca." where id_produto =".$data."";
 		}
 		public function mudar_informacoes_usuario($data)
 		{
@@ -21,13 +21,13 @@
 		{
 			return 'update usuario set status = "'.$status.'" where id_usuario ='.$id.' ';
 		}
-		public function finalizar_manuntencao($data)
+		public function finalizar_manutencao($data)
 		{
-			return 'UPDATE saida_para_manuntencao  SET data_retorno_veiculo = now() ,km_retorno_veiculo = "'.$data["km_entrada_veiculo"].'",km_saida_veiculo = "'.$data['km_saida_manuntencao'].'" , status="Fechado" where id_saida_manuntencao ="'.$data['cod_manuntencao'].'" ';
+			return 'UPDATE saida_para_manutencao  SET data_retorno_veiculo = now() ,km_retorno_veiculo = "'.$data["km_entrada_veiculo"].'",km_saida_veiculo = "'.$data['km_saida_manutencao'].'" , status="Fechado" where id_saida_manutencao ="'.$data['cod_manutencao'].'" ';
 		}
-		public function abrir_manuntencao($id)
+		public function abrir_manutencao($id)
 		{
-			return 'UPDATE saida_para_manuntencao  SET status="Aberto" where id_saida_manuntencao ="'.$id.'" ';
+			return 'UPDATE saida_para_manutencao  SET status="Aberto" where id_saida_manutencao ="'.$id.'" ';
 		}
 		public function mudar_km_troca_oleo($data,$id)
 		{

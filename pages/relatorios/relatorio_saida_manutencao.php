@@ -14,22 +14,22 @@
 			<div  class='resposive_table'>
 				<div class='box-dados'>
 					<div class='box-dados-title'>
-						<h1>Saida para manunteção</h1>
+						<h1>Saida para manuteção</h1>
 					</div>
 				<table id='HTMLtoPDF'>
 					<tr>
 						<th>Data saida</th>
 						<th>Data entrada</th>
-						<th>Código manuntenção </th>
-						<th>Veículo manuntenção</th>
+						<th>Código manutenção </th>
+						<th>Veículo manutenção</th>
 						<th>Veículo substituto</th>
-						<th>Descrição manuntenção</th>
+						<th>Descrição manutenção</th>
 						<th>Situação</th>
 					</tr>
 						<?php
 							$paginas = filter_input(INPUT_GET,'pagina',FILTER_SANITIZE_SPECIAL_CHARS);
 							$pagina = (isset($paginas))? $paginas : 1;
-							all_manuntencao($pagina);
+							all_manutencao($pagina);
 						?>
 				</table>
 				<button onclick= 'Gerar_pdf()'>Gerar documento</button>	

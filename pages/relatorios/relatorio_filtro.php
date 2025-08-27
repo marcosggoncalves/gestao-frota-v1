@@ -30,7 +30,7 @@
 						<select name="tipo_relatorio" >
 							<option value="">Selecione tipo relatório</option>
 							<option>Produtos Retirados</option>
-							<option>Saida Manuntenção</option>
+							<option>Saida Manutenção</option>
 							<option>Troca de oleo</option>
 						</select>
 				</div>

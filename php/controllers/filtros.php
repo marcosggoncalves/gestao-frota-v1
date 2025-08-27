@@ -13,7 +13,7 @@ function relatorio_mensais_resultados($post)
 	$_SESSION['dados']  = array();
 	if ($post['tipo_relatorio'] == 'Produtos Retirados') {
 		$GLOBALS['Recursos']->fetch_array(
-			$GLOBALS['Recursos']->Query($GLOBALS['selects']->filtro_produtos_retirados($_SESSION['pesquisa'])),
+			$GLOBALS['Recursos']->query($GLOBALS['selects']->filtro_produtos_retirados($_SESSION['pesquisa'])),
 			function ($dados) {
 				$_SESSION['dados'][] = "<tr>
 												<td>" . $GLOBALS['Recursos']->formatdata($dados[2]) . "</td>
@@ -23,9 +23,9 @@ function relatorio_mensais_resultados($post)
 			}
 		);
 		header('Location:../pages/relatorios/relatorio_filtro_produtos_retirados');
-	} else if ($post['tipo_relatorio'] == 'Saida Manuntenção') {
+	} else if ($post['tipo_relatorio'] == 'Saida Manutenção') {
 		$GLOBALS['Recursos']->fetch_array(
-			$GLOBALS['Recursos']->Query($GLOBALS['selects']->filtro_saida_manuntencao($_SESSION['pesquisa'])),
+			$GLOBALS['Recursos']->query($GLOBALS['selects']->filtro_saida_manutencao($_SESSION['pesquisa'])),
 			function ($dados) {
 				$_SESSION['dados'][] = '<tr>
 												<td>' . $GLOBALS['Recursos']->formatdata($dados[5]) . '</td>
@@ -33,16 +33,16 @@ function relatorio_mensais_resultados($post)
 												<td>' . $dados[0] . '</td>
 												<td>' . $dados[8] . '</td>
 												<td>' . $dados[4] . '</td>
-												<td><a href="../../php/request.php?page=manuntenção/visuzalizar&id=' . $dados[0] . '"><i class="material-icons">done_all</i></a></td>
+												<td><a href="../../php/request.php?page=manutencao/visuzalizar&id=' . $dados[0] . '"><i class="material-icons">done_all</i></a></td>
 											</tr>';
 			}
 		);
 		print_r($_SESSION['pesquisa']);
 
-		header('Location:../pages/relatorios/relatorio_filtro_saida_manuntenção');
+		header('Location:../pages/relatorios/relatorio_filtro_saida_manutenção');
 	} else {
 		$GLOBALS['Recursos']->fetch_array(
-			$GLOBALS['Recursos']->Query($GLOBALS['selects']->filtro_troca_oleo($_SESSION['pesquisa'])),
+			$GLOBALS['Recursos']->query($GLOBALS['selects']->filtro_troca_oleo($_SESSION['pesquisa'])),
 			function ($dados) {
 				$troca = ($dados[1] + $GLOBALS['config']['kilometragem_troca_de_oleo']);
 				$_SESSION['dados'][] = "<tr>

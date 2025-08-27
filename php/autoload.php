@@ -13,7 +13,7 @@
 	//controllers
 	include 'controllers/session.php';
 	include 'controllers/painel.php';
-	include 'controllers/saida_manuntencao.php';
+	include 'controllers/saida_manutencao.php';
 	include 'controllers/troca_oleo.php';
 	include 'controllers/retirada_produto.php';
 	include 'controllers/veiculos.php';

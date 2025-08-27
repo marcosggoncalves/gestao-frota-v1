@@ -9,7 +9,7 @@
 					<li>
 						<a>Registrar</a>
 						<ul>
-							<a href='../forms/cadastrar_saida_manuntencao'><li>Saida manuntenção</li></a>
+							<a href='../forms/cadastrar_saida_manutencao'><li>Saida manutenção</li></a>
 							<a href='../forms/cadastrar_troca_oleo'><li>Troca de óleo</li></a>
 							<a href='../forms/cadastrar_retirada_produto'><li>Retirada produto</li></a>
 						</ul>
@@ -26,7 +26,7 @@
 						<a>Relatórios</a>
 						<ul>
 							<a href='../relatorios/relatorio_retirada_produto'><li>Produtos retirados</li></a>
-							<a href='../relatorios/relatorio_saida_manuntencao'><li>Saida manuntenção</li></a>
+							<a href='../relatorios/relatorio_saida_manutencao'><li>Saida manutenção</li></a>
 							<a href='../relatorios/relatorio_todas_troca_oleo'><li>Troca óleo</li></a>
 							<a href='../relatorios/relatorio_todos_veiculos'><li>Veiculos</li></a>
 							<a href='../relatorios/relatorio_todos_produtos'><li>Produtos</li></a>

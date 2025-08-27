@@ -3,7 +3,7 @@
 
 function todos_produtos()
 {
-	$GLOBALS['Recursos']->fetch_array($GLOBALS['Recursos']->Query($GLOBALS['selects']->all_produtos()), function ($dados) {
+	$GLOBALS['Recursos']->fetch_array($GLOBALS['Recursos']->query($GLOBALS['selects']->all_produtos()), function ($dados) {
 		echo "<option value=" . $dados[0] . ">" . $dados[1] . "</option>";
 	});
 }
@@ -12,10 +12,10 @@ function salvar_retirada_produto($POST)
 
 	$_SESSION['dados'] = $POST;
 
-	$GLOBALS['Recursos']->fetch_array($GLOBALS['Recursos']->Query($GLOBALS['selects']->target_produto($_SESSION['dados']["id_produto"])), function ($produto) {
+	$GLOBALS['Recursos']->fetch_array($GLOBALS['Recursos']->query($GLOBALS['selects']->target_produto($_SESSION['dados']["id_produto"])), function ($produto) {
 		$_SESSION['produto'] =  $produto;
 
-		$GLOBALS['Recursos']->fetch_array($GLOBALS['Recursos']->Query($GLOBALS['selects']->target_produto_count($_SESSION['dados']["id_produto"])), function ($registros_produto_retirado) {
+		$GLOBALS['Recursos']->fetch_array($GLOBALS['Recursos']->query($GLOBALS['selects']->target_produto_count($_SESSION['dados']["id_produto"])), function ($registros_produto_retirado) {
 			if ($_SESSION['dados']['quantidade_retirada'] > 0) {
 				if ($_SESSION['dados']['quantidade_retirada'] > $_SESSION['produto'][3] && $_SESSION['dados']['quantidade_retirada'] > $_SESSION['produto'][4]) {
 					$_SESSION['msg'] = 'Quantidade não disponivel para retirada.';
@@ -33,10 +33,10 @@ function salvar_retirada_produto($POST)
 					} else {
 						$diferenca = ($_SESSION['produto'][4] - $_SESSION['dados']['quantidade_retirada']);
 					}
-					$salvar_retirada_produto = $GLOBALS['Recursos']->Query($GLOBALS['inserts']->salvar_retirada_produto($_SESSION['dados']));
+					$salvar_retirada_produto = $GLOBALS['Recursos']->query($GLOBALS['inserts']->salvar_retirada_produto($_SESSION['dados']));
 					$restante = ($_SESSION['produto'][4] + $_SESSION['dados']['quantidade_retirada']);
 
-					$quantidade_restante_produto = $GLOBALS['Recursos']->Query($GLOBALS['updates']->mudar_quantidade_restante_produto($diferenca, $_SESSION['produto'][0]));
+					$quantidade_restante_produto = $GLOBALS['Recursos']->query($GLOBALS['updates']->mudar_quantidade_restante_produto($diferenca, $_SESSION['produto'][0]));
 
 					try {
 						if (!$quantidade_restante_produto) {
@@ -61,7 +61,7 @@ function salvar_retirada_produto($POST)
 }
 function all_produtos_retirados($pagina)
 {
-	$GLOBALS['Recursos']->paginação($GLOBALS['Recursos']->Query($GLOBALS['selects']->produtos_retirados()), $GLOBALS['selects']->produtos_retirados(), $pagina, function ($dados) {
+	$GLOBALS['Recursos']->paginacao($GLOBALS['Recursos']->query($GLOBALS['selects']->produtos_retirados()), $GLOBALS['selects']->produtos_retirados(), $pagina, function ($dados) {
 		echo "<tr>
 				<td>" . $GLOBALS['Recursos']->formatdata($dados[2]) . "</td>
 				<td>" . $dados[1] . "</td>
@@ -71,7 +71,7 @@ function all_produtos_retirados($pagina)
 	}, function ($paginas) {
 		if ($paginas > 1) {
 			for ($i = 1; $i < $paginas + 1; $i++) {
-				echo " <div class='paginação'><a  href='../../pages/relatorios/relatorio_retirada_produto.php?pagina=$i'>" . $i . "</a></div>";
+				echo " <div class='paginacao'><a  href='../../pages/relatorios/relatorio_retirada_produto.php?pagina=$i'>" . $i . "</a></div>";
 			}
 		}
 	});

@@ -13,21 +13,21 @@
 		<div class="content">
 			<div class="box-dados">
 				<div class="box-dados-title">
-					<h1>Registrar saida manuntenção veiculo</h1>
+					<h1>Registrar saida manutenção veiculo</h1>
 				</div>
 				<div class="form_registrar">
-					<form name="form" action="../../php/request.php?page=Salvar/Manuntenção" method="post">
+					<form name="form" action="../../php/request.php?page=Salvar/Manutenção" method="post">
 						<div class="container-input">
 							<label for="km_saida_veiculo">Quilometragem saida:</label>
 							<input type="number" name="km_saida_veiculo" id="km_saida_veiculo">
 						</div>
 
 						<div class="container-input">
-							<label for="desc_manuntencao">Descrição:</label>
-							<textarea name="desc_manuntencao" id="desc_manuntencao" value='descricao' placeholder="Descreva a manuntenção do veiculo -  Exemplo: Veiculo saiu para manuntenção na suspensão traseira"></textarea>
+							<label for="desc_manutencao">Descrição:</label>
+							<textarea name="desc_manutencao" id="desc_manutencao" value='descricao' placeholder="Descreva a manutenção do veiculo -  Exemplo: Veiculo saiu para manutenção na suspensão traseira"></textarea>
 						</div>
 						<div class="container-input">
-							<label for="id_veiculo">Veículo saida para manuntenção:</label>
+							<label for="id_veiculo">Veículo saida para manutenção:</label>
 							<select name="id_veiculo">
 								<option value="">Selecionar veiculo</option>
 								<?= veiculos_status('', '', 'Todos') ?>

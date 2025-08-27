@@ -1,5 +1,7 @@
 
-CREATE database controle_sist;
+CREATE database controle_sist_v1;
+
+USE controle_sist_v1;
 
 CREATE TABLE `categoria` (
   `id_categoria` int(11) NOT NULL,
@@ -30,9 +32,8 @@ CREATE TABLE `produtos` (
     `quantidade_restante` int(11) DEFAULT NULL
 );
 
-
-CREATE TABLE `saida_para_manuntencao` (
-  `id_saida_manuntencao` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE `saida_para_manutencao` (
+  `id_saida_manutencao` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `km_retorno_veiculo` text,
   `km_saida_veiculo` text,
   `data_retorno_veiculo` datetime DEFAULT NULL,
@@ -40,9 +41,8 @@ CREATE TABLE `saida_para_manuntencao` (
   `data_saida_veiculo` datetime DEFAULT NULL,
   `veiculo_substituicao` varchar(60) DEFAULT NULL,
   `id_veiculo` int(11) DEFAULT NULL,
-  `desc_manuntencao` text
+  `desc_manutencao` text
 );
-
 
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,

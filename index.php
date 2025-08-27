@@ -6,7 +6,7 @@
 	<body>
 		<main>
 			<div class="login">
-				<form name="form"  action="php/request?page=Logar" method="post">
+				<form name="form"  action="php/request.php?page=Logar" method="post">
 					<div class="titulo">
 						<div>	
 							<h1>Transporte escolar</h1>
@@ -14,8 +14,8 @@
 						</div>
 					</div>
 					<div class="container-login">
-						<label for="Usuário">Usuário</label>
-						<input type="text" name="Usuário" id="Usuário">
+						<label for="usuario">Usuário</label>
+						<input type="text" name="usuario" id="usuario">
 					</div>
 
 					<div class="container-login">
@@ -23,7 +23,7 @@
 						<input type="password" name="senha" id="senha">
 					</div>
 					<div class="container-login">	
-						<input type="button" value="Entrar" onclick="inputs_name_validar('Usuário','senha')">
+						<input type="button" value="Entrar" onclick="inputs_name_validar('usuario','senha')">
 					</div>
 					<div>
 						<?php include 'pages/componentes/msg.inc' ?>

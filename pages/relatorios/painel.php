@@ -24,7 +24,7 @@
 						<span>Trocas de óleos: <b class="contador"><?php  estatisticas('troca'); ?></b> </span>
 					</div>
 					<div class="box-numeros-estaticas">
-						<span>Saida Manuntenção: <b class="contador"><?php  estatisticas('saida'); ?></b> </span>
+						<span>Saida Manutenção: <b class="contador"><?php  estatisticas('saida'); ?></b> </span>
 					</div>
 					<div class="box-numeros-estaticas">
 						<span>Veiculos Indisponivel: <b class="contador"><?php estatisticas('veiculos_Indisponivel'); ?></b> </span>
@@ -34,18 +34,18 @@
 					</div>
 				</div>
 				<div class="box-dados-title">
-					<h1>Manuntenções Recentes (abertas)</h1>
+					<h1>Manutenções Recentes (abertas)</h1>
 				</div>
 				<div id="HTMLtoPDF">
 					<table>
 						<tr>
 							<th>Veiculo substituto</th>
-							<th>Veiculo manuntenção </th>
+							<th>Veiculo manutenção </th>
 							<th>Data abertura</th>
 							<th>Oficina</th>
 							<th>Status </th>
 						</tr>
-						<?=substituiçao_veiculos();?>
+						<?=substituicao_veiculos();?>
 					</table>
 				</div>
 			</div>

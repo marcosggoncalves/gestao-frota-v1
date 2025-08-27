@@ -82,7 +82,7 @@ b {
 .box-estatisticas span b {
   font-weight: inherit;
 }
-.paginação {
+.paginacao {
   text-align: center;
   float: left;
   margin-bottom: 20px;
@@ -91,11 +91,11 @@ b {
   padding: 5px 5px;
   width: 18px;
 }
-.paginação a {
+.paginacao a {
   text-decoration: none;
   color: var(--elemento-font-black);
 }
-.paginação:hover,
+.paginacao:hover,
 button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {

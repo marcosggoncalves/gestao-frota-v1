@@ -1,8 +1,8 @@
 <?php 
 	class inserts {
-		public function salvar_manuntencao($data)
+		public function salvar_manutencao($data)
 		{
-			return "INSERT INTO saida_para_manuntencao VALUES ('0','','".$data["km_saida_veiculo"]."',null,'Aberto',now(),'".$data["placa_veiculo"]."','".$data["id_veiculo"]."','".$data["desc_manuntencao"]."')";
+			return "INSERT INTO saida_para_manutencao VALUES ('0','','".$data["km_saida_veiculo"]."',null,'Aberto',now(),'".$data["placa_veiculo"]."','".$data["id_veiculo"]."','".$data["desc_manutencao"]."')";
 		}
 		public function salvar_troca_oleo($data)
 		{
