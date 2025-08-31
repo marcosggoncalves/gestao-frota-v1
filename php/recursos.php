@@ -40,7 +40,6 @@
 			}
 
 			$callback2($this->paginas);
-
 		}
 		public function data_diferenca($data1,$data2){
 			  $this->datatime1 = new DateTime($data1);
