@@ -4,7 +4,7 @@
 	// conexão com banco de dados MYSQL
 	$config['host'] = '192.168.200.109';
 	$config['user'] = 'gonsul';
-	$config['password'] = 'gonsul@9185';
+	$config['password'] = 'd]HBJhIuGn3Lfol(';
 	$config['dbname'] = 'controle_sist_v1';
 	
 	//paginacao, quantidade de itens a ser mostrado.

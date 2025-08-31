@@ -126,4 +126,4 @@ COMMIT;
 
 
 INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `setor_usuario`, `email_usuario`, `telefone_usuario`, `senha_usuario`, `status`, `acesso`) VALUES
-(1, 'Marcos Lopes', 'T.I', 'marcoslopesg7@gmail,com', ' 6798343255', '99510796', 'Ativo', '2019-03-08 07:03:46');
+(1, 'Marcos Lopes', 'T.I', 'marcoslopesg7@gmail,com', '41988170812', '123456', 'Ativo', '2019-03-08 07:03:46');
