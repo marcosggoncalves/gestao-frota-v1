@@ -1,6 +1,6 @@
 # Aplicação PHP Procedural - Gestão de Frota
 
-Sem Framework PHP + MYSQL + Jquery e Javascript.
+PHP + MYSQL + Jquery e Javascript.
 
 ## Subir aplicação
 
@@ -10,7 +10,7 @@ Sem Framework PHP + MYSQL + Jquery e Javascript.
 
 Para acessar aplicação, utilize o acesso: Marcos Lopes e a senha: 123456
 
-Obs: aplicação foi feita encima do apache.
+Obs: aplicação feita para rodar no apache.
 
 ## Tela 1
 ![Painel da Aplicação - TELA 1](https://github.com/marcosggoncalves/gestao-frota-v1/blob/master/Pagina%201.jpg)
